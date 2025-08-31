@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
               onClick={() => handleNavClick('hero')}
               className="text-2xl font-bold text-gradient cursor-pointer"
             >
-              Lautaro
+              Franco Lautaro Gregorat
             </motion.button>
 
             {/* Desktop Navigation */}

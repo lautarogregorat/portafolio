@@ -10,17 +10,12 @@ import type { PortfolioData } from './types/portfolio';
 // Portfolio data with placeholders
 const portfolioData: PortfolioData = {
   personalInfo: {
-    name: 'Lautaro [Tu Apellido]',
-    title: 'Estudiante de Ing. en Sistemas | Desarrollador Backend & Pentester',
+    name: 'Franco Lautaro Gregorat',
+    title: 'Estudiante de Ing. en Sistemas de Información',
     heroTitle: 'Construyendo Software Seguro desde el Código hasta la Nube',
-    aboutText: `📝 PLACEHOLDER: Reemplaza este texto con tu párrafo personalizado sobre ti.
+    aboutText: `Estudiante avanzado de 5to año de Ingeniería en Sistemas de Información en UTN FRC, con experiencia práctica en el desarrollo de soluciones full-stack seguras y escalables. Mi expertise abarca desde la implementación de APIs RESTful con Java y Spring Boot hasta interfaces modernas con React, siempre aplicando principios de desarrollo seguro.
 
-Debe mencionar:
-• Que eres estudiante avanzado de 5to año de Ingeniería en Sistemas de Información
-• Tu pasión por la intersección entre desarrollo y seguridad
-• Tu objetivo de crear soluciones tecnológicas robustas y resilientes
-• Cualquier experiencia relevante o proyectos destacados
-• Tu visión sobre el futuro de la tecnología segura`
+Mi enfoque se centra en crear soluciones tecnológicas robustas, implementando prácticas de CI/CD, containerización con Kubernetes, y aplicando conocimientos de pentesting para desarrollar sistemas inherentemente seguros desde el diseño hasta el despliegue.`
   },
   pillars: [], // Los pilares se manejan directamente en PillarsSection
   projects: [
@@ -42,9 +37,9 @@ Debe mencionar:
     // }
   ],
   contact: {
-    email: 'tu-email@ejemplo.com', // 📝 PLACEHOLDER: Replace with your email
-    linkedin: 'https://linkedin.com/in/TU_PERFIL', // 📝 PLACEHOLDER: Replace with your LinkedIn
-    github: 'https://github.com/TU_USUARIO' // 📝 PLACEHOLDER: Replace with your GitHub
+    email: 'lautarogregorat@gmail.com', // 📝 PLACEHOLDER: Replace with your email
+    linkedin: 'https://www.linkedin.com/in/francolautarogregorat/', // 📝 PLACEHOLDER: Replace with your LinkedIn
+    github: 'https://github.com/lautarogregorat' // 📝 PLACEHOLDER: Replace with your GitHub
   }
 };
 

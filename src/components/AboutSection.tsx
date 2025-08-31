@@ -7,7 +7,7 @@ interface AboutSectionProps {
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ aboutText }) => {
   const [ref, inView] = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.3,
   });
 
@@ -34,58 +34,83 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ aboutText }) => {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid md:grid-cols-3 gap-8 items-center"
+            className="max-w-5xl mx-auto"
           >
-            {/* Profile Image Placeholder */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="mx-auto"
-            >
-              <div className="w-64 h-64 bg-gradient-to-br from-blue-500 via-purple-500 to-green-500 rounded-full p-1">
-                <div className="w-full h-full bg-primary rounded-full flex items-center justify-center">
-                  <div className="text-6xl font-bold text-gradient">L</div>
-                </div>
-              </div>
-              <p className="text-sm text-gray-400 mt-4 text-center">
-                📝 <strong>PLACEHOLDER:</strong> Reemplaza este círculo con tu foto profesional
-              </p>
-            </motion.div>
-
             {/* About Text */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="md:col-span-2 text-left"
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="text-center mb-12"
             >
               <div className="prose prose-lg prose-invert max-w-none">
-                <p className="text-lg md:text-xl leading-relaxed text-gray-300 mb-6">
+                <p className="text-lg md:text-xl leading-relaxed text-gray-300 mb-8">
                   {aboutText}
                 </p>
+              </div>
+            </motion.div>
                 
-                {/* Key highlights */}
-                <div className="grid sm:grid-cols-2 gap-4 mt-8">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, delay: 1 }}
-                    className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10"
-                  >
-                    <h4 className="text-lg font-semibold text-blue-400 mb-2">🎓 Formación</h4>
-                    <p className="text-gray-300">5to año de Ing. en Sistemas de Información</p>
-                  </motion.div>
-                  
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, delay: 1.2 }}
-                    className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10"
-                  >
-                    <h4 className="text-lg font-semibold text-green-400 mb-2">🎯 Enfoque</h4>
-                    <p className="text-gray-300">Desarrollo + Seguridad = Soluciones Robustas</p>
-                  </motion.div>
+            {/* Professional Highlights Grid */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-blue-400/30 transition-all duration-300"
+              >
+                <h4 className="text-lg font-semibold text-blue-400 mb-3">🎓 Formación</h4>
+                <p className="text-gray-300 text-sm">5to año UTN FRC</p>
+                <p className="text-gray-400 text-xs mt-1">Ing. en Sistemas de Información</p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 1 }}
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-green-400/30 transition-all duration-300"
+              >
+                <h4 className="text-lg font-semibold text-green-400 mb-3">🛡️ Seguridad</h4>
+                <p className="text-gray-300 text-sm">Pentesting</p>
+                <p className="text-gray-400 text-xs mt-1">Hack the Box Path</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 1.2 }}
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-purple-400/30 transition-all duration-300"
+              >
+                <h4 className="text-lg font-semibold text-purple-400 mb-3">⚙️ DevSecOps</h4>
+                <p className="text-gray-300 text-sm">Docker + Kubernetes</p>
+                <p className="text-gray-400 text-xs mt-1">CI/CD + AWS</p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 1.4 }}
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-orange-400/30 transition-all duration-300"
+              >
+                <h4 className="text-lg font-semibold text-orange-400 mb-3">🚀 Full-Stack</h4>
+                <p className="text-gray-300 text-sm">Java/Spring + React</p>
+                <p className="text-gray-400 text-xs mt-1">APIs RESTful + Microservicios</p>
+              </motion.div>
+            </div>
+
+            {/* Achievement Highlight */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 1.6 }}
+              className="mt-12 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-green-900/20 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+            >
+              <div className="text-center">
+                <h4 className="text-xl font-bold text-white mb-3">💡 Proyecto Destacado</h4>
+                <p className="text-gray-300 mb-2">Sistema de Gestión Veterinaria - Animalia</p>
+                <div className="flex justify-center gap-8 text-sm">
+                  <span className="text-blue-400">📈 +100% Performance</span>
+                  <span className="text-green-400">⚡ -80% Tiempo Respuesta</span>
+                  <span className="text-purple-400">🐳 Docker + CI/CD</span>
                 </div>
               </div>
             </motion.div>

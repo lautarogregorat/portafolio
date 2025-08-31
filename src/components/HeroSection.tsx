@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Shield, Server, Terminal } from 'lucide-react';
 import { scrollToSection } from '../hooks/useScrollSpy';
 
 interface HeroSectionProps {
@@ -10,9 +10,30 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ name, title, heroTitle }) => {
   const pillarButtons = [
-    { id: 'devops', label: 'DevSecOps', color: 'bg-devops hover:bg-blue-700' },
-    { id: 'security', label: 'Pentesting', color: 'bg-security hover:bg-emerald-700' },
-    { id: 'backend', label: 'Backend Dev', color: 'bg-backend hover:bg-amber-700' },
+    { 
+      id: 'devops', 
+      label: 'DevSecOps', 
+      subtitle: 'Shifting Left Security',
+      icon: Shield,
+      color: 'from-blue-500 to-blue-700',
+      hoverColor: 'from-blue-400 to-blue-600'
+    },
+    { 
+      id: 'security', 
+      label: 'Pentesting', 
+      subtitle: 'Ethical Hacking',
+      icon: Terminal,
+      color: 'from-emerald-500 to-emerald-700',
+      hoverColor: 'from-emerald-400 to-emerald-600'
+    },
+    { 
+      id: 'backend', 
+      label: 'Backend Dev', 
+      subtitle: 'APIs & Microservicios',
+      icon: Server,
+      color: 'from-orange-500 to-orange-700',
+      hoverColor: 'from-orange-400 to-orange-600'
+    },
   ];
 
   return (
@@ -48,27 +69,43 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ name, title, heroTitle
           </p>
         </motion.div>
 
-        {/* Pillar Navigation Buttons */}
+        {/* Pillar Navigation Cards */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto"
         >
-          {pillarButtons.map((button, index) => (
-            <motion.button
-              key={button.id}
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => scrollToSection(button.id)}
-              className={`px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-white transition-all duration-300 ${button.color} shadow-lg hover:shadow-xl transform hover:-translate-y-1`}
-            >
-              {button.label}
-            </motion.button>
-          ))}
+          {pillarButtons.map((button, index) => {
+            const IconComponent = button.icon;
+            return (
+              <motion.button
+                key={button.id}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1 + index * 0.15 }}
+                onClick={() => scrollToSection(button.id)}
+                className="group relative p-6 border border-white/20 rounded-xl hover:border-white/50 hover:bg-white/5 transition-all duration-200 hover:shadow-md"
+              >
+                {/* Icon - Static */}
+                <div className="mb-4">
+                  <div className={`mx-auto w-14 h-14 flex items-center justify-center rounded-lg bg-gradient-to-br ${button.color} transition-all duration-200 shadow-sm group-hover:shadow-md`}>
+                    <IconComponent className="w-7 h-7 text-white" />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-1 transition-colors duration-200">
+                    {button.label}
+                  </h3>
+                  <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200">
+                    {button.subtitle}
+                  </p>
+                </div>
+              </motion.button>
+            );
+          })}
         </motion.div>
 
         {/* Scroll Indicator */}
