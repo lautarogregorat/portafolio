@@ -8,7 +8,9 @@ export default defineConfig({
   theme: {
     extend: {
       colors: {
-        primary: '#0A192F',
+        primary: '#030B1B',
+        accent: '#60A5FA',
+        'accent-hover': '#2563EB',
         devops: '#1E3A8A',
         security: '#047857',
         backend: '#9A3412',

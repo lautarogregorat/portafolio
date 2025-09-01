@@ -135,7 +135,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ contact }) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 hover:from-blue-700 hover:via-purple-700 hover:to-green-700 rounded-lg font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Volver al inicio
             </motion.button>

@@ -102,7 +102,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ aboutText }) => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 1.6 }}
-              className="mt-12 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-green-900/20 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+              className="mt-12 bg-blue-900/20 backdrop-blur-sm rounded-xl p-6 border border-blue-500/20"
             >
               <div className="text-center">
                 <h4 className="text-xl font-bold text-white mb-3">💡 Proyecto Destacado</h4>

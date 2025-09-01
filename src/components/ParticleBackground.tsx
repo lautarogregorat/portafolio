@@ -60,7 +60,7 @@ export const ParticleBackground: React.FC = () => {
 
       particlesRef.current.forEach((particle) => {
         ctx.globalAlpha = particle.opacity;
-        ctx.fillStyle = '#64FFDA';
+        ctx.fillStyle = '#3B82F6';
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
@@ -76,7 +76,7 @@ export const ParticleBackground: React.FC = () => {
 
           if (distance < 100) {
             ctx.globalAlpha = (100 - distance) / 100 * 0.1;
-            ctx.strokeStyle = '#64FFDA';
+            ctx.strokeStyle = '#3B82F6';
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);

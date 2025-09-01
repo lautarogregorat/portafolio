@@ -24,7 +24,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
       <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all duration-300 hover:bg-white/10 h-full">
         {/* Project Image Placeholder */}
         <div className="relative mb-6 overflow-hidden rounded-lg">
-          <div className="aspect-video bg-gradient-to-br from-blue-500 via-purple-500 to-green-500 flex items-center justify-center">
+          <div className="aspect-video bg-blue-600 flex items-center justify-center">
             <div className="text-4xl font-bold text-white">
               {project.title.charAt(0)}
             </div>
