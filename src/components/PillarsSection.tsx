@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Shield, Server, Code, GitBranch, Lock, Database, Cloud, MonitorCheck, Terminal, Zap } from 'lucide-react';
+import { TechIcon } from './TechIcon';
 
 interface PillarProps {
   id: string;
@@ -29,23 +30,23 @@ const PillarSection: React.FC<PillarProps> = ({
   });
 
   const skillIcons: { [key: string]: React.ReactNode } = {
-    'CI/CD': <GitBranch className="w-5 h-5" />,
+    'CI/CD': <TechIcon name="GitLab" fallback={<GitBranch className="w-5 h-5" />} />,
     'Jenkins': <GitBranch className="w-5 h-5" />,
     'GitHub Actions': <GitBranch className="w-5 h-5" />,
-    'Docker': <Cloud className="w-5 h-5" />,
-    'Kubernetes': <Cloud className="w-5 h-5" />,
+    'Docker': <TechIcon name="Docker" fallback={<Cloud className="w-5 h-5" />} />,
+    'Kubernetes': <TechIcon name="Kubernetes" fallback={<Cloud className="w-5 h-5" />} />,
     'Terraform': <Code className="w-5 h-5" />,
     'Monitoreo': <MonitorCheck className="w-5 h-5" />,
     'OWASP Top 10': <Shield className="w-5 h-5" />,
-    'Nmap': <Terminal className="w-5 h-5" />,
+    'Nmap': <TechIcon name="Nmap" fallback={<Terminal className="w-5 h-5" />} />,
     'Burp Suite': <Shield className="w-5 h-5" />,
     'Metasploit': <Zap className="w-5 h-5" />,
     'Wireshark': <MonitorCheck className="w-5 h-5" />,
     'APIs RESTful': <Server className="w-5 h-5" />,
-    'Spring Boot': <Code className="w-5 h-5" />,
+    'Spring Boot': <TechIcon name="Spring Boot" fallback={<Code className="w-5 h-5" />} />,
     'Microservicios': <Server className="w-5 h-5" />,
     'JPA/Hibernate': <Database className="w-5 h-5" />,
-    'SQL/NoSQL': <Database className="w-5 h-5" />,
+    'SQL/NoSQL': <TechIcon name="SQL/NoSQL" fallback={<Database className="w-5 h-5" />} />,
   };
 
   return (

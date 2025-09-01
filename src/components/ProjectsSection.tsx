@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Github, ExternalLink } from 'lucide-react';
 import type { Project } from '../types/portfolio';
+import { TechIcon } from './TechIcon';
 
 interface ProjectsSectionProps {
   projects: Project[];
@@ -70,9 +71,10 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
             {project.technologies.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 text-sm bg-blue-500/20 text-blue-300 rounded-full border border-blue-500/30"
+                className="flex items-center space-x-2 px-3 py-1 text-sm bg-blue-500/20 text-blue-300 rounded-full border border-blue-500/30"
               >
-                {tech}
+                <TechIcon name={tech} className="w-4 h-4" />
+                <span>{tech}</span>
               </span>
             ))}
           </div>

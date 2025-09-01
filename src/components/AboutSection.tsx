@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { TechIcon } from './TechIcon';
 
 interface AboutSectionProps {
   aboutText: string;
@@ -58,7 +59,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ aboutText }) => {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-blue-400/30 transition-all duration-300"
               >
-                <h4 className="text-lg font-semibold text-blue-400 mb-3">🎓 Formación</h4>
+                <div className="flex items-center space-x-2 mb-3">
+                  <div className="text-2xl">🎓</div>
+                  <h4 className="text-lg font-semibold text-blue-400">Formación</h4>
+                </div>
                 <p className="text-gray-300 text-sm">5to año UTN FRC</p>
                 <p className="text-gray-400 text-xs mt-1">Ing. en Sistemas de Información</p>
               </motion.div>
@@ -69,7 +73,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ aboutText }) => {
                 transition={{ duration: 0.6, delay: 1 }}
                 className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-green-400/30 transition-all duration-300"
               >
-                <h4 className="text-lg font-semibold text-green-400 mb-3">🛡️ Seguridad</h4>
+                <div className="flex items-center space-x-2 mb-3">
+                  <TechIcon name="Hack the Box" className="w-6 h-6" fallback={<div className="text-2xl">🛡️</div>} />
+                  <h4 className="text-lg font-semibold text-green-400">Seguridad</h4>
+                </div>
                 <p className="text-gray-300 text-sm">Pentesting</p>
                 <p className="text-gray-400 text-xs mt-1">Hack the Box Path</p>
               </motion.div>
@@ -80,7 +87,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ aboutText }) => {
                 transition={{ duration: 0.6, delay: 1.2 }}
                 className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-purple-400/30 transition-all duration-300"
               >
-                <h4 className="text-lg font-semibold text-purple-400 mb-3">⚙️ DevSecOps</h4>
+                <div className="flex items-center space-x-2 mb-3">
+                  <TechIcon name="Kubernetes" className="w-6 h-6" fallback={<div className="text-2xl">⚙️</div>} />
+                  <h4 className="text-lg font-semibold text-purple-400">DevSecOps</h4>
+                </div>
                 <p className="text-gray-300 text-sm">Docker + Kubernetes</p>
                 <p className="text-gray-400 text-xs mt-1">CI/CD + AWS</p>
               </motion.div>
@@ -91,7 +101,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ aboutText }) => {
                 transition={{ duration: 0.6, delay: 1.4 }}
                 className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-orange-400/30 transition-all duration-300"
               >
-                <h4 className="text-lg font-semibold text-orange-400 mb-3">🚀 Full-Stack</h4>
+                <div className="flex items-center space-x-2 mb-3">
+                  <TechIcon name="React" className="w-6 h-6" fallback={<div className="text-2xl">🚀</div>} />
+                  <h4 className="text-lg font-semibold text-orange-400">Full-Stack</h4>
+                </div>
                 <p className="text-gray-300 text-sm">Java/Spring + React</p>
                 <p className="text-gray-400 text-xs mt-1">APIs RESTful + Microservicios</p>
               </motion.div>
