@@ -6,8 +6,9 @@ interface TechIconProps {
   fallback?: React.ReactNode;
 }
 
-// Mapeo de tecnologías a sus respectivos archivos SVG
+// Mapeo de tecnologías a sus respectivos archivos SVG y PNG
 const techLogos: { [key: string]: string } = {
+  'DevSecOps': '/ovejeroalemanlogodevsecops.png',
   'Docker': '/docker-icon.svg',
   'Kubernetes': '/kubernetes.svg',
   'Spring Boot': '/spring-icon.svg',

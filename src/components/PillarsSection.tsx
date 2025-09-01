@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Shield, Server, Code, GitBranch, Lock, Database, Cloud, MonitorCheck, Terminal, Zap } from 'lucide-react';
 import { TechIcon } from './TechIcon';
+import { SecurityTerminal } from './SecurityTerminal';
+import { SecuritySkillCard } from './SecuritySkillCard';
 
 interface PillarProps {
   id: string;
@@ -11,7 +13,7 @@ interface PillarProps {
   skills: string[];
   bgColor: string;
   icon: React.ReactNode;
-  codeSnippet?: string;
+  codeSnippet?: string | string[];
 }
 
 const PillarSection: React.FC<PillarProps> = ({ 
@@ -53,8 +55,25 @@ const PillarSection: React.FC<PillarProps> = ({
     <section 
       id={id} 
       ref={ref}
-      className={`min-h-screen flex items-center section-padding py-20 transition-all duration-1000 ${inView ? bgColor : 'bg-primary'} relative z-10`}
+      className={`min-h-screen flex items-center section-padding py-20 transition-all duration-1000 ${inView ? bgColor : 'bg-primary'} relative z-10 overflow-hidden`}
     >
+      {/* Security Grid Background - solo para DevSecOps */}
+      {id === 'devops' && (
+        <>
+          {/* Grid pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `
+                linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)
+              `,
+              backgroundSize: '50px 50px'
+            }} />
+          </div>
+          
+          
+        </>
+      )}
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -68,9 +87,7 @@ const PillarSection: React.FC<PillarProps> = ({
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex justify-center mb-8"
           >
-            <div className="p-6 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">
-              {icon}
-            </div>
+            {icon}
           </motion.div>
 
           <motion.h2
@@ -110,18 +127,28 @@ const PillarSection: React.FC<PillarProps> = ({
           >
             <h3 className="text-2xl font-bold text-white mb-6">Habilidades Clave</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {skills.map((skill, index) => (
-                <motion.div
-                  key={skill}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
-                  className="flex items-center space-x-3 p-4 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
-                >
-                  {skillIcons[skill] || <Code className="w-5 h-5" />}
-                  <span className="text-white font-medium">{skill}</span>
-                </motion.div>
-              ))}
+              {skills.map((skill, index) => 
+                id === 'devops' ? (
+                  <SecuritySkillCard
+                    key={skill}
+                    skill={skill}
+                    icon={skillIcons[skill] || <Code className="w-5 h-5" />}
+                    index={index}
+                    inView={inView}
+                  />
+                ) : (
+                  <motion.div
+                    key={skill}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
+                    className="flex items-center space-x-3 p-4 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  >
+                    {skillIcons[skill] || <Code className="w-5 h-5" />}
+                    <span className="text-white font-medium">{skill}</span>
+                  </motion.div>
+                )
+              )}
             </div>
           </motion.div>
 
@@ -133,16 +160,20 @@ const PillarSection: React.FC<PillarProps> = ({
             className="relative"
           >
             {codeSnippet ? (
-              <div className="bg-black/50 rounded-lg p-6 border border-white/20 backdrop-blur-sm">
-                <div className="flex items-center space-x-2 mb-4">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              id === 'devops' && Array.isArray(codeSnippet) ? (
+                <SecurityTerminal commands={codeSnippet} />
+              ) : (
+                <div className="bg-black/50 rounded-lg p-6 border border-white/20 backdrop-blur-sm">
+                  <div className="flex items-center space-x-2 mb-4">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  </div>
+                  <pre className="text-sm text-green-400 overflow-x-auto">
+                    <code>{codeSnippet}</code>
+                  </pre>
                 </div>
-                <pre className="text-sm text-green-400 overflow-x-auto">
-                  <code>{codeSnippet}</code>
-                </pre>
-              </div>
+              )
             ) : (
               <div className="bg-white/10 rounded-lg p-8 border border-white/20 backdrop-blur-sm text-center">
                 <div className="text-6xl mb-4">{icon}</div>
@@ -165,17 +196,24 @@ export const PillarsSection: React.FC = () => {
       description: 'Integro prácticas de seguridad desde las primeras etapas del ciclo de desarrollo, automatizando procesos y garantizando despliegues seguros y confiables.',
       skills: ['CI/CD', 'Jenkins', 'GitHub Actions', 'Docker', 'Kubernetes', 'Terraform', 'Monitoreo'],
       bgColor: 'bg-devops',
-      icon: <Shield className="w-16 h-16 text-white" />,
-      codeSnippet: `# Dockerfile con security scanning
-FROM node:18-alpine
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nextjs -u 1001
-
-COPY --chown=nextjs:nodejs . .
-USER nextjs
-
-# Security scan
-RUN npm audit --audit-level high`
+      icon: (
+        <img 
+          src="/ovejeroalemanlogodevsecops.png" 
+          alt="DevSecOps Guardian" 
+          className="w-40 h-40 drop-shadow-[0_0_8px_rgba(59,130,246,0.3)]"
+        />
+      ),
+      codeSnippet: [
+        '🔍 Initiating security pipeline...',
+        '📋 Running SAST analysis...',
+        '✅ Static analysis: PASSED',
+        '🐳 Scanning container vulnerabilities...',
+        '✅ Container scan: PASSED',
+        '🔐 Checking secrets in code...',
+        '✅ Secret detection: CLEAN',
+        '📊 Generating security report...',
+        '🛡️  Pipeline secure - Ready for deployment!'
+      ]
     },
     {
       id: 'security',
