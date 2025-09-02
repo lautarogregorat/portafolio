@@ -201,9 +201,6 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) =>
             <Github className="w-5 h-5" />
             <span>Ver todos mis repositorios</span>
           </motion.a>
-          <p className="text-sm text-gray-400 mt-2">
-            📝 <strong>PLACEHOLDER:</strong> Reemplaza [TU_USUARIO] con tu username de GitHub
-          </p>
         </motion.div>
       </div>
     </section>
