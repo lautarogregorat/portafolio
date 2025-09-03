@@ -19,22 +19,48 @@ Mi enfoque se centra en crear soluciones tecnológicas robustas, implementando p
   },
   pillars: [], // Los pilares se manejan directamente en PillarsSection
   projects: [
-    // 📝 PLACEHOLDER: Uncomment and fill with your real projects
-    // {
-    //   id: 'project-1',
-    //   title: 'Tu Proyecto 1',
-    //   description: 'Descripción breve del proyecto y su impacto.',
-    //   technologies: ['Java', 'Spring Boot', 'Docker', 'PostgreSQL'],
-    //   githubUrl: 'https://github.com/tu-usuario/proyecto-1',
-    //   imageUrl: 'https://tu-demo-url.com' // Optional
-    // },
-    // {
-    //   id: 'project-2',
-    //   title: 'Tu Proyecto 2',
-    //   description: 'Descripción breve del proyecto y su impacto.',
-    //   technologies: ['Python', 'Django', 'Redis', 'AWS'],
-    //   githubUrl: 'https://github.com/tu-usuario/proyecto-2'
-    // }
+    {
+      id: 'shopup',
+      title: 'ShopUp',
+      description: 'Plataforma web completa diseñada para simplificar la gestión de pequeños emprendedores. Permite crear tiendas online propias y vender productos en un marketplace compartido.',
+      technologies: ['React', 'Node.js', 'Spring Boot', 'MySQL', 'Docker'],
+      githubUrl: 'https://github.com/lautarogregorat/shopup'
+    },
+    {
+      id: 'digital-money-house',
+      title: 'Digital Money House',
+      description: 'Billetera digital con arquitectura de microservicios usando Spring Cloud (Eureka, Gateway, Config Server). Incluye suite de testing integral y despliegue automatizado en Kubernetes.',
+      technologies: ['Spring Cloud', 'Docker', 'Kubernetes', 'Helm', 'JUnit', 'Mockito', 'RestAssured'],
+      githubUrl: 'https://github.com/lautarogregorat/digital-money-house'
+    },
+    {
+      id: 'animalia',
+      title: 'Animalia - Sistema Veterinario',
+      description: 'Sistema de gestión veterinaria con API RESTful segura. Optimización del 100% en recuperación de datos y 80% de reducción en tiempos de respuesta mediante Docker.',
+      technologies: ['Java', 'Spring Boot', 'React', 'Material UI', 'Docker', 'Keycloak', 'MySQL'],
+      githubUrl: 'https://github.com/lautarogregorat/animalia'
+    },
+    {
+      id: 'ecommerce-platform',
+      title: 'Plataforma E-commerce Distribuida',
+      description: 'E-commerce con arquitectura de microservicios desacoplados (Productos, Pedidos, Inventario) comunicados vía Kafka. Stack completo de observabilidad con Prometheus, Grafana y Loki.',
+      technologies: ['Spring Boot', 'Kafka', 'Kubernetes', 'Prometheus', 'Grafana', 'Loki'],
+      githubUrl: 'https://github.com/lautarogregorat/ecommerce-microservices'
+    },
+    {
+      id: 'isidoro',
+      title: 'Isidoro S.A.',
+      description: 'Sitio web institucional responsive y multilenguaje con microservicio para gestión de formularios. CI/CD automatizado con GitHub Actions y despliegue en Docker.',
+      technologies: ['React', 'Vite', 'TailwindCSS', 'Node.js', 'GitHub Actions', 'Docker', 'Nginx'],
+      githubUrl: 'https://github.com/lautarogregorat/isidoro-website'
+    },
+    {
+      id: 'diamond-fitness',
+      title: 'Diamond Fitness',
+      description: 'Sistema de gestión para gimnasios desarrollado en Java Swing, específicamente optimizado para hardware legacy (Windows 7, 2GB RAM).',
+      technologies: ['Java', 'Swing', 'MySQL', 'Windows Desktop'],
+      githubUrl: 'https://github.com/lautarogregorat/diamond-fitness'
+    }
   ],
   contact: {
     email: 'lautarogregorat@gmail.com', // 📝 PLACEHOLDER: Replace with your email

@@ -43,7 +43,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ name, title, heroTitle
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-snug sm:leading-tight"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-snug sm:leading-tight text-left"
         >
           <span className="text-gradient">{heroTitle}</span>
         </motion.h1>
