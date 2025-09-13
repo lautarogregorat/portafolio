@@ -469,7 +469,7 @@ export const PillarsSection: React.FC = () => {
       bgColor: 'bg-devops',
       icon: (
         <img 
-          src="/ovejeroalemanlogodevsecops.png" 
+          src={import.meta.env.BASE_URL + 'ovejeroalemanlogodevsecops.png'} 
           alt="DevSecOps Guardian" 
           className="w-48 h-48 md:w-52 md:h-52 drop-shadow-[0_0_8px_rgba(59,130,246,0.3)]"
         />
@@ -495,7 +495,7 @@ export const PillarsSection: React.FC = () => {
       bgColor: 'bg-security',
       icon: (
         <img 
-          src="/ovejeroalemanlogopen-Photoroom.png" 
+          src={import.meta.env.BASE_URL + 'ovejeroalemanlogopen-Photoroom.png'} 
           alt="Cybersecurity Hacker Dog" 
           className="w-48 h-48 md:w-52 md:h-52 drop-shadow-[0_0_8px_rgba(34,197,94,0.3)]"
         />
@@ -522,7 +522,7 @@ export const PillarsSection: React.FC = () => {
       bgColor: 'bg-backend',
       icon: (
         <img 
-          src="/ovejeroalemanlogodev-Photoroom.png" 
+          src={import.meta.env.BASE_URL + 'ovejeroalemanlogodev-Photoroom.png'} 
           alt="Software Developer Dog" 
           className="w-48 h-48 md:w-52 md:h-52 drop-shadow-[0_0_8px_rgba(180,83,9,0.3)]"
         />

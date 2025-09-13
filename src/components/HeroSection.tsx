@@ -14,19 +14,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ name, title }) => {
       id: 'devops', 
       label: 'DevSecOps', 
       subtitle: 'Shifting Left Security',
-      logo: '/ovejeroalemanlogodevsecops.png'
+      logo: import.meta.env.BASE_URL + 'ovejeroalemanlogodevsecops.png'
     },
     { 
       id: 'security', 
       label: 'Ciberseguridad', 
       subtitle: 'Ethical Hacking',
-      logo: '/ovejeroalemanlogopen-Photoroom.png'
+      logo: import.meta.env.BASE_URL + 'ovejeroalemanlogopen-Photoroom.png'
     },
     { 
       id: 'backend', 
       label: 'Desarrollo', 
       subtitle: 'Full Stack Apps',
-      logo: '/ovejeroalemanlogodev-Photoroom.png'
+      logo: import.meta.env.BASE_URL + 'ovejeroalemanlogodev-Photoroom.png'
     },
   ];
 
