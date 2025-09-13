@@ -1,0 +1,30 @@
+{
+  "name": "Franco Lautaro Gregorat - Portfolio",
+  "short_name": "FL Gregorat",
+  "description": "Portfolio profesional de Franco Lautaro Gregorat - DevSecOps & Desarrollo Seguro",
+  "start_url": "/portafolio/",
+  "display": "standalone",
+  "background_color": "#0A192F",
+  "theme_color": "#0A192F",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/portafolio/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/portafolio/logo.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": [
+    "portfolio",
+    "developer",
+    "devsecops"
+  ],
+  "lang": "es"
+}

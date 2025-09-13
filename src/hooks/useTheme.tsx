@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 
 type Theme = 'light' | 'dark';
 
@@ -21,7 +21,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     const savedTheme = localStorage.getItem('theme') as Theme;
     
     // Check system preference if no saved theme
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
     const initialTheme = savedTheme || 'light';
     console.log('Initial theme:', initialTheme); // DEBUG

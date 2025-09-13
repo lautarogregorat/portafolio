@@ -8,7 +8,7 @@ interface HeroSectionProps {
   heroTitle: string;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ name, title, heroTitle }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ name, title }) => {
   const pillarButtons = [
     { 
       id: 'devops', 
