@@ -28,7 +28,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ aboutText }) => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl md:text-5xl font-bold text-white mb-8"
           >
-            Sobre <span className="text-gradient">Mí</span>
+            Sobre <span className="text-white">Mí</span>
           </motion.h2>
 
           <motion.div
@@ -57,11 +57,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ aboutText }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-blue-400/30 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/30 transition-all duration-300"
               >
                 <div className="flex items-center space-x-2 mb-3">
                   <div className="text-2xl">🎓</div>
-                  <h4 className="text-lg font-semibold text-blue-400">Formación</h4>
+                  <h4 className="text-lg font-semibold text-gray-100">Formación</h4>
                 </div>
                 <p className="text-gray-300 text-sm">5to año UTN FRC</p>
                 <p className="text-gray-400 text-xs mt-1">Ing. en Sistemas de Información</p>
@@ -71,11 +71,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ aboutText }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 1 }}
-                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-green-400/30 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/30 transition-all duration-300"
               >
                 <div className="flex items-center space-x-2 mb-3">
                   <TechIcon name="Hack the Box" className="w-6 h-6" fallback={<div className="text-2xl">🛡️</div>} />
-                  <h4 className="text-lg font-semibold text-green-400">Seguridad</h4>
+                  <h4 className="text-lg font-semibold text-gray-100">Seguridad</h4>
                 </div>
                 <p className="text-gray-300 text-sm">Pentesting</p>
                 <p className="text-gray-400 text-xs mt-1">Hack the Box Path</p>
@@ -85,11 +85,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ aboutText }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 1.2 }}
-                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-purple-400/30 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/30 transition-all duration-300"
               >
                 <div className="flex items-center space-x-2 mb-3">
                   <TechIcon name="Kubernetes" className="w-6 h-6" fallback={<div className="text-2xl">⚙️</div>} />
-                  <h4 className="text-lg font-semibold text-purple-400">DevSecOps</h4>
+                  <h4 className="text-lg font-semibold text-gray-100">DevSecOps</h4>
                 </div>
                 <p className="text-gray-300 text-sm">Docker + Kubernetes</p>
                 <p className="text-gray-400 text-xs mt-1">CI/CD + AWS</p>
@@ -99,11 +99,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ aboutText }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 1.4 }}
-                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-orange-400/30 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/30 transition-all duration-300"
               >
                 <div className="flex items-center space-x-2 mb-3">
                   <TechIcon name="React" className="w-6 h-6" fallback={<div className="text-2xl">🚀</div>} />
-                  <h4 className="text-lg font-semibold text-orange-400">Full-Stack</h4>
+                  <h4 className="text-lg font-semibold text-gray-100">Full-Stack</h4>
                 </div>
                 <p className="text-gray-300 text-sm">Java/Spring + React</p>
                 <p className="text-gray-400 text-xs mt-1">APIs RESTful + Microservicios</p>
@@ -115,15 +115,15 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ aboutText }) => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 1.6 }}
-              className="mt-12 bg-blue-900/20 backdrop-blur-sm rounded-xl p-6 border border-blue-500/20"
+              className="mt-12 bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
             >
               <div className="text-center">
                 <h4 className="text-xl font-bold text-white mb-3">💡 Proyecto Destacado</h4>
                 <p className="text-gray-300 mb-2">Sistema de Gestión Veterinaria - Animalia</p>
                 <div className="flex justify-center gap-8 text-sm">
-                  <span className="text-blue-400">📈 +100% Performance</span>
-                  <span className="text-green-400">⚡ -80% Tiempo Respuesta</span>
-                  <span className="text-purple-400">🐳 Docker + CI/CD</span>
+                  <span className="text-gray-200">📈 +100% Performance</span>
+                  <span className="text-gray-200">⚡ -80% Tiempo Respuesta</span>
+                  <span className="text-gray-200">🐳 Docker + CI/CD</span>
                 </div>
               </div>
             </motion.div>

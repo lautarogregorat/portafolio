@@ -12,7 +12,7 @@ const portfolioData: PortfolioData = {
   personalInfo: {
     name: 'Franco Lautaro Gregorat',
     title: 'Estudiante de Ing. en Sistemas de Información',
-    heroTitle: 'Construyendo Software Seguro desde el Código hasta la Nube',
+    heroTitle: 'DevSecOps & Desarrollo Seguro',
     aboutText: `Estudiante avanzado de 5to año de Ingeniería en Sistemas de Información en UTN FRC, con experiencia práctica en el desarrollo de soluciones full-stack seguras y escalables. Mi expertise abarca desde la implementación de APIs RESTful con Java y Spring Boot hasta interfaces modernas con React, siempre aplicando principios de desarrollo seguro.
 
 Mi enfoque se centra en crear soluciones tecnológicas robustas, implementando prácticas de CI/CD, containerización con Kubernetes, y aplicando conocimientos de pentesting para desarrollar sistemas inherentemente seguros desde el diseño hasta el despliegue.`
@@ -37,21 +37,21 @@ Mi enfoque se centra en crear soluciones tecnológicas robustas, implementando p
       id: 'animalia',
       title: 'Animalia - Sistema Veterinario',
       description: 'Sistema de gestión veterinaria con API RESTful segura. Optimización del 100% en recuperación de datos y 80% de reducción en tiempos de respuesta mediante Docker.',
-      technologies: ['Java', 'Spring Boot', 'React', 'Material UI', 'Docker', 'Keycloak', 'MySQL'],
+      technologies: ['Java', 'Spring Boot', 'React', 'Material UI', 'Docker', 'JWT', 'MySQL'],
       githubUrl: 'https://github.com/lautarogregorat/animalia'
     },
     {
       id: 'ecommerce-platform',
       title: 'Plataforma E-commerce Distribuida',
       description: 'E-commerce con arquitectura de microservicios desacoplados (Productos, Pedidos, Inventario) comunicados vía Kafka. Stack completo de observabilidad con Prometheus, Grafana y Loki.',
-      technologies: ['Spring Boot', 'Kafka', 'Kubernetes', 'Prometheus', 'Grafana', 'Loki'],
+      technologies: ['Java', 'Spring Boot', 'Kubernetes', 'Docker', 'AWS', 'Linux'],
       githubUrl: 'https://github.com/lautarogregorat/ecommerce-microservices'
     },
     {
       id: 'isidoro',
       title: 'Isidoro S.A.',
       description: 'Sitio web institucional responsive y multilenguaje con microservicio para gestión de formularios. CI/CD automatizado con GitHub Actions y despliegue en Docker.',
-      technologies: ['React', 'Vite', 'TailwindCSS', 'Node.js', 'GitHub Actions', 'Docker', 'Nginx'],
+      technologies: ['React', 'Vite', 'JavaScript', 'Node.js', 'GitLab', 'Docker'],
       githubUrl: 'https://github.com/lautarogregorat/isidoro-website'
     },
     {
@@ -101,15 +101,6 @@ function App() {
         />
       </main>
 
-      {/* Development Notice */}
-      <div className="fixed bottom-4 right-4 z-40 bg-yellow-500/20 border border-yellow-500/30 rounded-lg p-3 backdrop-blur-sm">
-        <p className="text-yellow-300 text-sm font-medium">
-          🚧 Portafolio en desarrollo
-        </p>
-        <p className="text-yellow-300/70 text-xs">
-          Reemplaza los placeholders con tu información
-        </p>
-      </div>
     </div>
   );
 }

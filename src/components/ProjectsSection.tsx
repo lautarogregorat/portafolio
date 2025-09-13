@@ -58,7 +58,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
 
         {/* Project Content */}
         <div className="space-y-4">
-          <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
+          <h3 className="text-xl font-bold text-white group-hover:text-gray-100 transition-colors duration-300">
             {project.title}
           </h3>
           
@@ -71,7 +71,7 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
             {project.technologies.map((tech) => (
               <span
                 key={tech}
-                className="flex items-center space-x-2 px-3 py-1 text-sm bg-blue-500/20 text-blue-300 rounded-full border border-blue-500/30"
+                className="flex items-center space-x-2 px-3 py-1 text-sm bg-white/10 text-gray-200 rounded-full border border-white/20"
               >
                 <TechIcon name={tech} className="w-4 h-4" />
                 <span>{tech}</span>
@@ -134,7 +134,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) =>
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl md:text-5xl font-bold text-white mb-4"
           >
-            Proyectos <span className="text-gradient">Destacados</span>
+            Proyectos <span className="text-white">Destacados</span>
           </motion.h2>
 
           <motion.p

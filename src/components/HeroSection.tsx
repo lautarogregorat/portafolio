@@ -31,21 +31,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ name, title, heroTitle
   ];
 
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col justify-start md:justify-center items-center section-padding pt-16 md:pt-20 z-10">
+    <section id="hero" className="relative min-h-screen flex flex-col justify-center items-center section-padding pt-24 md:pt-32 lg:pt-28 z-10">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
-        className="text-center max-w-6xl mx-auto mt-4 md:mt-0"
+        className="text-center max-w-6xl mx-auto mt-8 md:mt-4 lg:mt-0"
       >
         {/* Hero Title */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-snug sm:leading-tight text-left"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-10 md:mb-6 leading-snug sm:leading-tight text-center md:text-left text-white"
         >
-          <span className="text-gradient">{heroTitle}</span>
+          <span className="block md:hidden">DevSecOps & Desarrollo Seguro</span>
+          <span className="hidden md:block">Construyendo Software Seguro desde el Código hasta la Nube</span>
         </motion.h1>
 
         {/* Name and Title */}

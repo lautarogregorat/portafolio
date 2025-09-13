@@ -69,17 +69,7 @@ const Navbar: React.FC = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => handleNavClick('hero')}
-              className="text-2xl font-bold text-gradient cursor-pointer"
-            >
-              Franco Lautaro Gregorat
-            </motion.button>
-
+          <div className="flex items-center justify-end">
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               {navigationItems.map((item) => (
@@ -116,7 +106,7 @@ const Navbar: React.FC = () => {
                 e.stopPropagation();
                 setIsMobileMenuOpen(!isMobileMenuOpen);
               }}
-              className={`md:hidden p-2 text-white hover:text-blue-400 transition-all duration-300 ${
+              className={`md:hidden p-2 text-white hover:text-white transition-all duration-300 ${
                 isMobileMenuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'
               }`}
             >

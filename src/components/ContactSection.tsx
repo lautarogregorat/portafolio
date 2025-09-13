@@ -19,24 +19,24 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ contact }) => {
       label: 'LinkedIn',
       value: 'Conectemos profesionalmente',
       href: contact.linkedin,
-      color: 'hover:text-blue-400 hover:border-blue-400',
-      bgColor: 'hover:bg-blue-500/10'
+      color: 'hover:text-white hover:border-white/50',
+      bgColor: 'hover:bg-white/10'
     },
     {
       icon: <Github className="w-8 h-8" />,
       label: 'GitHub',
       value: 'Explora mis repositorios',
       href: contact.github,
-      color: 'hover:text-gray-300 hover:border-gray-300',
-      bgColor: 'hover:bg-gray-500/10'
+      color: 'hover:text-white hover:border-white/50',
+      bgColor: 'hover:bg-white/10'
     },
     {
       icon: <Mail className="w-8 h-8" />,
       label: 'Email',
       value: contact.email,
       href: `mailto:${contact.email}`,
-      color: 'hover:text-green-400 hover:border-green-400',
-      bgColor: 'hover:bg-green-500/10'
+      color: 'hover:text-white hover:border-white/50',
+      bgColor: 'hover:bg-white/10'
     }
   ];
 
@@ -56,7 +56,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ contact }) => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
-            ¿<span className="text-gradient">Conectamos</span>?
+            ¿<span className="text-white">Conectamos</span>?
           </motion.h2>
 
           <motion.p

@@ -42,7 +42,7 @@ const PillarSection: React.FC<PillarProps> = ({
     'OWASP Top 10': <Shield className="w-5 h-5" />,
     'Nmap': <TechIcon name="Nmap" fallback={<Terminal className="w-5 h-5" />} />,
     'Burp Suite': <Shield className="w-5 h-5" />,
-    'Metasploit': <Zap className="w-5 h-5" />,
+    'Metasploit': <TechIcon name="Metasploit" fallback={<Zap className="w-5 h-5" />} />,
     'Wireshark': <MonitorCheck className="w-5 h-5" />,
     'APIs RESTful': <Cloud className="w-5 h-5" />,
     'Spring Boot': <TechIcon name="Spring Boot" fallback={<Code className="w-5 h-5" />} />,
@@ -121,7 +121,7 @@ const PillarSection: React.FC<PillarProps> = ({
             >
               {/* Fila 1: Skills Grid */}
               <div>
-                <h3 className="text-xl font-bold text-white mb-6">Stack Tecnológico</h3>
+                <h3 className="text-xl font-bold text-gray-100 mb-6">Stack Tecnológico</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
                   {skills.map((skill, index) => (
                     <div key={skill} className="transform hover:scale-105 transition-transform duration-200">
@@ -217,7 +217,7 @@ const PillarSection: React.FC<PillarProps> = ({
             >
               {/* Fila 1: Skills Grid */}
               <div>
-                <h3 className="text-xl font-bold text-white mb-6">Arsenal de Hacking</h3>
+                <h3 className="text-xl font-bold text-gray-100 mb-6">Arsenal de Hacking</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
                   {skills.map((skill, index) => (
                     <div key={skill} className="transform hover:scale-105 transition-transform duration-200">
@@ -323,7 +323,7 @@ const PillarSection: React.FC<PillarProps> = ({
             >
               {/* Fila 1: Skills Grid 3x2 */}
               <div>
-                <h3 className="text-xl font-bold text-white mb-6">Tecnologías Clave</h3>
+                <h3 className="text-xl font-bold text-gray-100 mb-6">Tecnologías Clave</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
                   {skills.map((skill, index) => (
                     <div key={skill} className="transform hover:scale-105 transition-transform duration-200">
@@ -410,7 +410,7 @@ const PillarSection: React.FC<PillarProps> = ({
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, delay: 1 }}
           >
-            <h3 className="text-2xl font-bold text-white mb-6">Habilidades Clave</h3>
+            <h3 className="text-2xl font-bold text-gray-100 mb-6">Habilidades Clave</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {skills.map((skill, index) => (
                 <motion.div
@@ -491,7 +491,7 @@ export const PillarsSection: React.FC = () => {
       title: 'Ciberseguridad Ofensiva',
       subtitle: 'Pentesting & Ethical Hacking',
       description: 'Me especializo en la identificación proactiva de vulnerabilidades, realizando pruebas de penetración y análisis de seguridad para fortalecer las defensas.',
-      skills: ['OWASP Top 10', 'Nmap', 'Burp Suite', 'Metasploit', 'Wireshark'],
+      skills: ['OWASP Top 10', 'Nmap', 'Burp Suite', 'Metasploit', 'Wireshark', 'Kali Linux'],
       bgColor: 'bg-security',
       icon: (
         <img 

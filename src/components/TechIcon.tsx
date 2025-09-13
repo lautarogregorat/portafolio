@@ -27,6 +27,7 @@ const techLogos: { [key: string]: string } = {
   'Linux': '/linux-tux.svg',
   'Kali Linux': '/kali-linux-seeklogo.svg',
   'Hack the Box': '/hack-the-box-svgrepo-com.svg',
+  'Metasploit': '/metasploit-logo-light-external-use.svg',
   'Vite': '/vite.svg',
   'TypesenseQL': '/typesense-icon.svg',
 };
